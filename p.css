@@ -5,11 +5,18 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   overflow: hidden;
   padding-top: 15%;
+}
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 /*the container must be positioned relative:*/
 .custom-select {
@@ -90,7 +97,7 @@ body {
 
 /*hide the items when the select box is closed:*/
 .select-hide {
-  animation-delay: 200ms;
+  animation-delay: 250ms;
   animation-name: hide;
   animation-iteration-count: infinite;
   animation-duration: 150ms;

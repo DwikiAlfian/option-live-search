@@ -16,7 +16,7 @@ for (i = 0; i < l; i++) {
   b.setAttribute("class", "select-items select-hide");
   var inputselect = document.createElement("input");
   inputselect.setAttribute("type", "text");
-  inputselect.setAttribute("placeholder", "Cari Kota");
+  inputselect.setAttribute("placeholder", "Cari...");
   // inputselect.setAttribute("tabindex", "1");
   b.appendChild(inputselect);
   for (j = 1; j < ll; j++) {
@@ -60,16 +60,14 @@ for (i = 0; i < l; i++) {
   var result = b.firstChild.value.toUpperCase();
   for (let p = 1; p < b.childElementCount; p++) {
     b.firstChild.addEventListener("keyup", function () {
-      // console.log(list[p].innerText.toUpperCase() + inputselect.value);
-      // console.log(b.firstChild.value.toUpperCase());
       if (
-        list[p].innerText
+        this.parentElement.children[p].innerText
           .toUpperCase()
-          .indexOf(b.firstChild.value.toUpperCase())
+          .indexOf(this.parentElement.firstChild.value.toUpperCase())
       ) {
-        list[p].style.display = "none";
+        this.parentElement.children[p].style.display = "none";
       } else {
-        list[p].style.display = "";
+        this.parentElement.children[p].style.display = "";
       }
     });
   }
