@@ -19,7 +19,7 @@ for (i = 0; i < l; i++) {
   inputselect.setAttribute("placeholder", "Cari...");
   // inputselect.setAttribute("tabindex", "1");
   b.appendChild(inputselect);
-  for (j = 1; j < ll; j++) {
+  for (j = 0; j < ll; j++) {
     /*for each option in the original select element,
     create a new DIV that will act as an option item:*/
     c = document.createElement("DIV");
