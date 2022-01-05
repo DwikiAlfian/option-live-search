@@ -66,11 +66,11 @@ for (i = 0; i < l; i++) {
       if (
         this.parentElement.children[p].innerText
           .toUpperCase()
-          .indexOf(this.parentElement.firstChild.value.toUpperCase())
+          .indexOf(this.parentElement.firstChild.value.toUpperCase()) > -1
       ) {
-        this.parentElement.children[p].style.display = "none";
-      } else {
         this.parentElement.children[p].style.display = "";
+      } else {
+        this.parentElement.children[p].style.display = "none";
       }
     });
   }
